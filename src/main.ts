@@ -24,24 +24,26 @@ function updateTeam(id: string) {
 updateTeam('team1')
 updateTeam('team2')
 
-function updateScore(id2: string) {
-  console.log
-  const changeScoreButton = document.querySelector(
-    `.${id2} i`
+function changeScore(id: string) {
+  const increaseScoreButton = document.querySelector(
+    `.${id} i`
   ) as HTMLButtonElement
-  const scoreHeadingElement = document.querySelector(`h3`) as HTMLHeadingElement
+  const scoreHeadingElement = document.querySelector(
+    `.${id} h3`
+  ) as HTMLHeadingElement
 
-  console.log({ changeScoreButton, scoreHeadingElement })
+  console.log({ increaseScoreButton, scoreHeadingElement })
 
-  function increaseScore(event: MouseEvent) {
-    const plusButtonPressed = event.target
-    if (plusButtonPressed instanceof HTMLButtonElement) {
-      const currentScore = plusButtonPressed.value
-      scoreHeadingElement.innerText = currentScore
-    }
+  function increaseScore(event: Event)
+  {
+    const scoreElementChanged = event.target
+    
+    if (scoreElementChanged instanceof HTMLButtonElement) {
+    const currentScore = plusButtonPressed.value
+    scoreHeadingElement.innerText +=
   }
-  changeScoreButton?.addEventListener('click', increaseScore)
+  
+  increaseScore.addEventListener('click', increaseScore(event))
 }
-
-updateScore('team1')
-updateScore('team2')
+changeScore('team1')
+changeScore('team2')
