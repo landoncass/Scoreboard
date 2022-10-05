@@ -23,3 +23,8 @@ function updateTeam(id: string) {
 
 updateTeam('team1')
 updateTeam('team2')
+
+const plusButton = document.querySelector('button')
+plusButton?.addEventListener('click', function () {
+  console.log('Thanks for clicking')
+})
