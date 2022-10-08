@@ -42,9 +42,6 @@ section {
   align-items: center;
 }
 
-section winner {
-}
-
 section h2,
 section p {
   text-align: center;
@@ -86,6 +83,11 @@ div {
 }
 
 #period {
+  display: flex;
+  flex-direction: column;
   color: white;
   font-size: 2rem;
+}
+
+#quarters {
 }
