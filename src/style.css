@@ -84,3 +84,8 @@ div {
   justify-content: center;
   padding-top: 3rem;
 }
+
+#period {
+  color: white;
+  font-size: 2rem;
+}
