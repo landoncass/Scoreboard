@@ -19,7 +19,9 @@ h1 {
   font-family: 'Peralta', cursive;
   margin: 1rem 0 3rem 0;
   color: white;
-  font-size: 3rem;
+  font-size: 6rem;
+  padding-top: 2rem;
+  padding-bottom: 10rem;
 }
 
 main {
@@ -38,6 +40,9 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+section winner {
 }
 
 section h2,
@@ -72,4 +77,10 @@ fieldset i.add {
 
 fieldset i.subtract {
   color: #f64545;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
 }
