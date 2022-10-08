@@ -14,7 +14,7 @@ function setupTeam(id: string) {
     `.${id} .subtract`
   ) as HTMLElement
   const resetButton = document.querySelector('.reset') as HTMLButtonElement
-  const teamSection = document.querySelector(`section .${id}`) as HTMLElement
+  const teamSection = document.getElementById('section')
 
   console.log({ inputElement, headingElement })
 
@@ -31,22 +31,21 @@ function setupTeam(id: string) {
   function resetScores(_event: Event) {
     score = 0
     scoreElement.innerText = score.toString()
+    teamSection!.style.backgroundColor = 'grey'
   }
   resetButton?.addEventListener('click', resetScores)
 
   function incrementScore(_event: Event) {
-    if (score < 22) {
+    if (score < 21) {
       score += 1
       scoreElement.innerText = score.toString()
     }
     if (score === 21) {
+      teamSection!.style.backgroundColor = 'lime'
       alert(`${headingElement.innerText} got 21 points and won the game!`)
-      teamSection.style.backgroundColor = 'lime'
-      resetScores(_event)
     }
   }
   addButton?.addEventListener('click', incrementScore)
-  teamSection?.addEventListener('click', incrementScore)
 
   function decrementScore(_event: Event) {
     console.log('sub')
@@ -57,8 +56,6 @@ function setupTeam(id: string) {
   }
   console.log(subtractButton)
   subtractButton?.addEventListener('click', decrementScore)
-
-  // function changeWinningTeamColor =
 }
 
 setupTeam('team1')
