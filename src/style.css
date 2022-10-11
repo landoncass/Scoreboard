@@ -17,11 +17,10 @@ body {
 h1 {
   text-align: center;
   font-family: 'Peralta', cursive;
-  margin: 1rem 0 3rem 0;
+  margin: 1rem 0 0rem 0;
   color: white;
   font-size: 6rem;
   padding-top: 2rem;
-  padding-bottom: 10rem;
 }
 
 main {
@@ -90,4 +89,19 @@ div {
 }
 
 #quarters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#quarters li {
+}
+
+.Timer {
+  color: white;
+  width: 100%;
+}
+
+.Timer h2 {
+  font-size: 5rem;
 }
