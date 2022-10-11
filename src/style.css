@@ -11,7 +11,9 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  background-image: url('court.jpg');
+  background-image: url('court2.jpg');
+  background-size: 1800px;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -21,6 +23,8 @@ h1 {
   color: white;
   font-size: 6rem;
   padding-top: 2rem;
+  background-color: black;
+  opacity: 75%;
 }
 
 main {
@@ -78,7 +82,7 @@ fieldset i.subtract {
 div {
   display: flex;
   justify-content: center;
-  padding-top: 3rem;
+  /* padding-top: 3rem; */
 }
 
 #period {
@@ -86,6 +90,7 @@ div {
   flex-direction: column;
   color: white;
   font-size: 2rem;
+  background-color: black;
 }
 
 #quarters {
@@ -94,14 +99,12 @@ div {
   align-items: center;
 }
 
-#quarters li {
-}
-
 .Timer {
-  color: white;
+  display: flex;
+  color: orangered;
   width: 100%;
 }
 
 .Timer h2 {
-  font-size: 5rem;
+  font-size: 8rem;
 }

@@ -15,6 +15,11 @@ function setupTeam(id: string) {
   ) as HTMLElement
   const resetButton = document.querySelector('.reset') as HTMLButtonElement
   const teamSection = document.getElementById('section')
+  // const timer = document.getElementById('Timer')
+
+  // function updateTimer(){
+  //   if
+  // }
 
   console.log({ inputElement, headingElement })
 
