@@ -61,7 +61,7 @@ function setupTeam(id: string) {
 
 function initializeClock() {
   let period = 1
-  let seconds = 10
+  let seconds = 600
   var clock = document.getElementById('Timer')
   var minutesSpan = clock?.querySelector('.minutes')
   var secondsSpan = clock?.querySelector('.seconds')
