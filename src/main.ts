@@ -15,11 +15,6 @@ function setupTeam(id: string) {
   ) as HTMLElement
   const resetButton = document.querySelector('.reset') as HTMLButtonElement
   const teamSection = document.getElementById('section')
-  // const timer = document.getElementById('Timer')
-
-  // function updateTimer(){
-  //   if
-  // }
 
   console.log({ inputElement, headingElement })
 
@@ -34,6 +29,7 @@ function setupTeam(id: string) {
   inputElement.addEventListener('input', updateTeamName)
 
   function resetScores(_event: Event) {
+    initializeClock()
     score = 0
     scoreElement.innerText = score.toString()
     teamSection!.style.backgroundColor = 'grey'
@@ -63,5 +59,39 @@ function setupTeam(id: string) {
   subtractButton?.addEventListener('click', decrementScore)
 }
 
+function initializeClock() {
+  let period = 1
+  let seconds = 10
+  var clock = document.getElementById('Timer')
+  var minutesSpan = clock?.querySelector('.minutes')
+  var secondsSpan = clock?.querySelector('.seconds')
+  let timer: number
+  function updateClock() {
+    seconds--
+    if (period > 4) {
+      clearInterval(timer)
+      seconds = 0
+    }
+    if (seconds === 0 && period <= 4) {
+      seconds = 10
+      period++
+      const lis = document.querySelectorAll(
+        '#quarters li'
+      ) as NodeListOf<HTMLLIElement>
+      lis.forEach((li) => li.classList.remove('active'))
+
+      const li = document.querySelector(`#quarter${period}`) as HTMLLIElement
+      li.classList.add('active')
+    }
+    minutesSpan!.innerHTML = Math.floor(seconds / 60)
+      .toString()
+      .padStart(2, '0')
+    secondsSpan!.innerHTML = (seconds % 60).toString().padStart(2, '0')
+  }
+  updateClock()
+  timer = setInterval(updateClock, 1000)
+}
+
+initializeClock()
 setupTeam('team1')
 setupTeam('team2')

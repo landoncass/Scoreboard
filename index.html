@@ -15,10 +15,15 @@
       <h1>My Score Board</h1>
     </header>
     <main>
-      <div class="Timer">
-        <h2 id="minutes">10</h2>
-        <h2>:</h2>
-        <h2 id="second">00</h2>
+      <div id="Timer">
+        <div>
+          <span class="minutes"></span>
+          <div class="smalltext">:</div>
+        </div>
+        <div>
+          <span class="seconds"></span>
+          <!-- <div class="smalltext">Seconds</div> -->
+        </div>
       </div>
       <section id="section" class="team1">
         <h2>Team 1</h2>
@@ -35,7 +40,7 @@
       <div id="period">
         <h3>Period</h3>
         <ul id="quarters">
-          <li id="quarter1">1</li>
+          <li id="quarter1" class="active">1</li>
           <li id="quarter2">2</li>
           <li id="quarter3">3</li>
           <li id="quarter4">4</li>

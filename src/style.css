@@ -11,9 +11,8 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  background-image: url('court2.jpg');
-  background-size: 1800px;
-  background-repeat: no-repeat;
+  background-image: url('court3.jpg');
+  background-size: 100%;
 }
 
 h1 {
@@ -91,6 +90,7 @@ div {
   color: white;
   font-size: 2rem;
   background-color: black;
+  opacity: 75%;
 }
 
 #quarters {
@@ -99,10 +99,16 @@ div {
   align-items: center;
 }
 
-.Timer {
+#quarters .active {
+  color: red;
+}
+
+#Timer {
   display: flex;
-  color: orangered;
+  color: yellow;
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
+  font-size: 6rem;
 }
 
 .Timer h2 {
